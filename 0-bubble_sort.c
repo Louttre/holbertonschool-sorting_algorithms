@@ -26,11 +26,11 @@ void bubble_sort(int *array, size_t size)
 				{
 					printf("%d", array[l]);
 					if (l != size - 1)
- 						printf(", ");
+						printf(", ");
 					else
 						putchar('\n');
 				}
 			}
 		}
-	}	
+	}
 }
