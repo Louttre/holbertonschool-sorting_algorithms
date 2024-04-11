@@ -15,12 +15,12 @@ void selection_sort(int *array, size_t size)
 	{
 		return;
 	}
-	for (index = 0 ; index < size ; index++)
+	for (index = 0; index < size; index++)
 	{
 		nombre_min = array[index];
 		index_nombre_min = index;
 
-		for (i = index ; i < size ; i++)
+		for (i = index; i < size; i++)
 		{
 			if (nombre_min > (array[i]))
 			{
