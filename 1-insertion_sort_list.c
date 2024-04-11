@@ -1,17 +1,20 @@
 #include "sort.h"
 #include <stdio.h>
-
+/**
+ * insertion_sort_list -  sorts a doubly linked list of integers
+ * @list: pointer to the head of a doubly linked list
+ */
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *temp = *list, *temp2 = temp->next;
 	listint_t *holder, *holder2;
-	
+
 	if (!list)
-		return;	
+		return;
 	while (temp2)
 	{
 		holder2 = temp2->next;
-		while (temp && temp2->n < temp->n)	
+		while (temp && temp2->n < temp->n)
 		{
 			holder = temp;
 			temp2->prev = temp->prev;
@@ -36,7 +39,7 @@ void insertion_sort_list(listint_t **list)
 				holder = holder->next;
 			}
 		}
-		if (holder2)	
+		if (holder2)
 			temp = holder2->prev;
 		temp2 = holder2;
 	}
